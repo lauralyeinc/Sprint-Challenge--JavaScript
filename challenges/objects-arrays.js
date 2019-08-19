@@ -73,11 +73,14 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach = (gradInfo) => {
-  universities.push(gradInfo.university)
+function Universities() {
+let newArray = [];
+for (let i = 0; i < graduates.length; i ++) {
+  universities.push(graduates[i].university);
+  }
+  return newArray.sort();
 };
-universities.sort()
-console.log(universities)
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -85,23 +88,22 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
-graduates.forEach = (object) => {
-  contactInfo.push(object.first_name, object.email)
-};
+const contactInfo = graduates.map((information) => `${information.first_name} ${information.email}`);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-graduates.forEach (function(string) {
-  if (string.university.includes('Uni'))
-  {
-    uni.push(string.university)
+for (let i = 0; i < graduates.length; i++) {
+  let ContainsUni = graduates[i],university; 
+  if(ContainsUni.includes('Uni')) {
+    uni.push(ContainsUni);
   }
-});
+}
 console.log(uni);
 
-
+/* adding this link as reference, because I lucked into geting .includes to work with Request 3.  Never used it before. 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+*/
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
