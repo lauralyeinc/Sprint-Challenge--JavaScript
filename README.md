@@ -28,15 +28,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. Describe the biggest difference between `.forEach` & `.map`.  
+
+The biggest difference between .forEach & .map is that .map creates a new array with the results of calling a provided function.  They both call on every element in the array.  
 
 2. What is the difference between a function and a method?
 
+A function is used in the global scope, window, where a method can only be used inside a function in local scope. 
+
 3. What is closure?
+
+A closure is essentially the { } brackets.  But in detail it's how a function opens and closes and how you can block off a local scope of a function from the global and to be able to add another function within a function ( called a method), and making it local inside the global function.  Closure gives you access to an outer function's scope from an inner function. 
 
 4. Describe the four rules of the 'this' keyword.
 
+	4)  The four rules of "this" keyword are:
+		1) Window/Gobal Biding is the value of "this" will be in the window/ console Object. Shouldn't be used, like ever, but need to understand the reference to it.
+		2) Implicit Binding is whenever a function is called by a preceding dot (.), the object before that dot is "this". (example.this).
+		3) New Binding is when using a constructor function (is a function that returns an object, it's an object creater. OOP) "this" refers to the specific instance of the object that is created and returned by the constructor function. 
+Explicit Binding is whenever JavaScript's call or apply method is ued, "this" is explicted defined. We can override what a constructor objects get set to do/say etc.
+
 5. Why do we need super() in an extended class?
+
+We need super() in an extended class because it's the special sauce or keyword that links the child class to the parent class. Without it it's not related at all, it's just another parent/person in the global world. 
 
 ## Project Set up
 
