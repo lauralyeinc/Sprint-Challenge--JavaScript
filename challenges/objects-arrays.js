@@ -73,9 +73,9 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach(fucntion(gradInfo) {
+graduates.forEach = (gradInfo) => {
   universities.push(gradInfo.university)
-});
+};
 universities.sort()
 console.log(universities)
 
@@ -87,16 +87,18 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 graduates.forEach = (object) => {
-  contactInfo.push(object.first_name + " " + object.email)
+  contactInfo.push(object.first_name, object.email)
 };
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-const stringQuestion = (object) => {
-  return object.univerty === "Uni"
-}
-uni = graduates.filter(stringQuestion);
+graduates.forEach (function(string) {
+  if (string.university.includes('Uni'))
+  {
+    uni.push(string.university)
+  }
+});
 console.log(uni);
 
 
@@ -123,7 +125,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 zooAnimals.forEach(animalinfo => {
-  animalNames.push(`Name: ${animalinfo.animal_name} + " " + Scientific: ${animalinfo.scientific_name}.`);
+  animalNames.push(`Name: ${animalinfo.animal_name} Scientific: ${animalinfo.scientific_name}.`);
 })
 console.log(animalNames);
 
@@ -146,9 +148,8 @@ console.log(lowerCase.map(animalinfo => animalinfo.toLowerCase()));
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation zooAnimals.filter((animal) => {
-  return animal.poulation < "5";
-});
+const lowerPopulation = zooAnimals.filter(animal =>   animal.population < "5");
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
