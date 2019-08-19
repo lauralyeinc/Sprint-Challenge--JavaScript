@@ -93,8 +93,17 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-const uni = [];
-console.log(uni);
+const uni = function(item) {
+ const results = [];
+ for(let i = 0; i < item.length; i++) {
+   let containsUni = item[i].university;
+   if(containsUni.includes("Uni")) {
+     results.push(containsUni);
+   }
+ }
+ return results;
+};
+console.log(uni(graduates));
 
 // ==== ADVANCED Array Methods ====
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
@@ -151,3 +160,7 @@ zooAnimals.forEach(function(animal) {
 });
 populationTotal = population.reduce(Total)
 console.log(populationTotal);
+
+/*
+Stretch: If you haven't already, convert your array method callbacks into arrow functions. 
+*/
